@@ -1,9 +1,13 @@
 #include<stdio.h>
 void main()
 {
-   int a,b,c;
-   a=5;
-   b=6;
-   c=a+b;
-   printf("%d",c);
+   int a;
+   printf("Enter number");
+   scanf("%d",&a);
+   if (a%2==0) {
+    printf("Number is even %d",a);
+   }
+   else {
+    printf("Number is odd %d",a);
+   }
 }
