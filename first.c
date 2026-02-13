@@ -1,13 +1,22 @@
 #include<stdio.h>
 int main() {
-    float basic_salary, HRA, TA, gross_salary, PT, net_salary;
-    printf("Enter basic salary");
-    scanf("%f",&basic_salary);
-    HRA = basic_salary * 0.10;
-    TA = basic_salary * 0.05;
-    gross_salary = basic_salary + HRA + TA;
-    PT = gross_salary * 0.02;
-    net_salary = gross_salary - PT;
-    printf("%f",net_salary);
+    int score;
+    printf("Enter the student's score (0-100): ");
+    scanf("%d",&score);
+    if (score >= 90) {
+        printf("Grade: A\n");
+    } else if (score >= 80) {
+        printf("Grade: B\n");
+    } else if (score >= 70) {
+        printf("Grade: C\n");
+    } else if (score >= 60) {
+        printf("Grade: D\n");
+    } else if (score >= 50) {
+        printf("Grade: E\n");
+    } else if (score >= 40) {
+        printf("Grade: F\n");
+    } else {
+        printf("FAIL");
+    }
     return 0;
 }
