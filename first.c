@@ -1,20 +1,15 @@
 #include<stdio.h>
 int main() {
-    char Name[50];
-    int roll;
-    char College[50];
-    int division;
-    printf("Enter Name\n");
-    scanf("%s",Name);
-    printf("Enter Roll No\n");
-    scanf("%d",&roll);
-    printf("Enter College name\n");
-    scanf("%s",College);
-    printf("Enter division\n");
-    scanf("%d",&division);
-    printf("Name: %s\n",Name);
-    printf("roll NO: %d\n",roll);
-    printf("College Name: %s\n",College);
-    printf("Division: %d\n",division);
+    int year;
+    printf("Enter year: ");
+    scanf("%d",&year);
+    if (year % 4 == 0)
+    {
+        printf("Leap year is %d",year);
+    }
+    else
+    {
+        printf("Not a Leap year %d",year);
+    }
     return 0;
 }
