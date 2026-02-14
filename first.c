@@ -1,21 +1,13 @@
 #include<stdio.h>
 void main() {
-    int num,digit,temp,sum;
+    int num,digit;
     printf("Enter num: ");
     scanf("%d",&num);
-    temp=num;
-    while(temp!=0)
+    while(num>0)
     {
-        digit=temp%10;
-        sum=sum+(digit*digit*digit);
-        temp=temp/10;
+        digit=num%10;
+        printf("%d",digit);
+        num=num/10;
     }
-    if(sum==num)
-    {
-        printf("num is armstrong");
-    }
-    else
-    {
-        printf("num is not armstrong");
-    }
+    printf("\n");
 }
