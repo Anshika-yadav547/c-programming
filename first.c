@@ -1,11 +1,22 @@
 #include<stdio.h>
 int main() {
-    int x;
-    printf("Enter the value of x: ");
-    scanf("%d",&x);
-    for(int i=1;i<=10;i++)
+    int a[2][2],i,j;
+    printf("Enter elements:\n");
+    for(i=0;i<2;i++)
     {
-        printf("%d x %d = %d\n",x,i,x*i);
+        for(j=0;j<2;j++)
+        {
+            printf("Enter elements [%d][%d]: ",i,j);
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("2 x 2 matrix is:\n");
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<2;j++)
+        {
+            printf("%d",a[i][j]);
+        }
     }
 return 0;
 }
