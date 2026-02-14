@@ -1,31 +1,21 @@
 #include<stdio.h>
-int main() {
-    int a,b,ch,E,F;
-    float c,d;
-    printf("Enter numbers: ");
-    scanf("%d%d",&a,&b);
-    printf("Select switch: ");
-    scanf("%d",&ch);
-    switch(ch)
+void main() {
+    int num,digit,temp,sum;
+    printf("Enter num: ");
+    scanf("%d",&num);
+    temp=num;
+    while(temp!=0)
     {
-        case(1):
-        E=a+b;
-        printf("Addition of two number: %d",E);
-        break;
-        case(2):
-        F=a-b;
-        printf("Subtraction of two number: %d",F);
-        break;
-        case(3):
-        c=a*b;
-        printf("Multiplication of two number: %f",c);
-        break;
-        case(4):
-        d=a/b;
-        printf("Division of two number: %f",d);
-        break;
-        default:
-        printf("choice is incorrect");
+        digit=temp%10;
+        sum=sum+(digit*digit*digit);
+        temp=temp/10;
     }
-return 0;
+    if(sum==num)
+    {
+        printf("num is armstrong");
+    }
+    else
+    {
+        printf("num is not armstrong");
+    }
 }
