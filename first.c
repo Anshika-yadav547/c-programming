@@ -1,44 +1,20 @@
 #include<stdio.h>
+#include<stdlib.h>
 int main() {
-    int rows,cols;
-    printf("Enter number of rows: ");
-    scanf("%d",&rows);
-    printf("Enter numbers of columns: ");
-    scanf("%d",&cols);
-    int A[rows][cols], B[rows][cols] ,result[rows][cols];
-    printf("\nEnter elements of first matrix:\n");
-    for(int i =0; i < rows; i++)
+    int num1,num2,i,gcd;
+    printf("Enter number: ");
+    scanf("%d",&num1);
+    printf("Enter new number: ");
+    scanf("%d",&num2);
+    num1 = abs(num1);
+    num2 = abs(num2);
+    for(i=1;i<=num1&&i<=num2;i++)
     {
-        for(int j =0; j<cols;j++)
+        if(num1%i==0&&num2%i==0)
         {
-            printf("A[%d][%d]: ",i,j);
-            scanf("%d",&A[i][j]);
+            gcd = i;
         }
     }
-    printf("\nEnter elements of second matrix:\n");
-    for(int i = 0; i < rows; i++)
-    {
-        for(int j = 0; j < cols; j++)
-        {
-            printf("B[%d][%d]: ",i,j);
-            scanf("%d",&B[i][j]);
-        }
-    }
-    for(int i = 0;i < rows;i++)
-    {
-        for(int j = 0;j<cols;j++)
-        {
-            result[i][j] = A[i][j] + B[i][j];
-        }
-    }
-    printf("\nResult of matrix addition:\n");
-    for(int i = 0; i < rows;i++)
-    {
-        for(int j = 0; j < cols;j++)
-        {
-            printf("%d",result[i][j]);
-        }
-        printf("\n");
-    }
-return 0;
+    printf("GCD is %d",gcd);
+    return 0;
 }
