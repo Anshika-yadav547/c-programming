@@ -16,7 +16,7 @@ int main()
     {
         for(j=0;j<2;j++)
         {
-            printf("%d",a[i][j]);
+            printf("%d ",a[i][j]);
         }
         printf("\n");
     }
@@ -33,7 +33,7 @@ int main()
     {
         for(j=0;j<2;j++)
         {
-            printf("%d",b[i][j]);
+            printf("%d ",b[i][j]);
         }
         printf("\n");
     }
@@ -49,7 +49,7 @@ int main()
     {
         for(j=0;j<2;j++)
         {
-            printf("%d",c[i][j]);
+            printf("%d ",c[i][j]);
         }
         printf("\n");
     }
