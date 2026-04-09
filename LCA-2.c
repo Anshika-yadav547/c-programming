@@ -3,7 +3,6 @@ struct student {
     char Name[50];
     int Roll_No;
     int Marks;
-    int Total;
     float percentage;
 } s[10];
 int main()
